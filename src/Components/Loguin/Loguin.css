@@ -216,13 +216,49 @@ color: white;
     }
 
 
-    .submit-container button {
-        
+
+
+    
+}
+
+
+
+
+@media only screen and (min-width: 460px){
+
+    
+
+    .container{
+
+
+        display: flex;
+        flex-direction: column;
+
+   
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+
+    }
+
+
+    .header{
+        margin: 15px;
+    }
+
+    .inputs{
+
+    }
+
+
+    .input {
+        margin: 50px;
+
     }
 
 
 
 
 
-    
 }

@@ -3,16 +3,28 @@ import React  , {useState} from 'react' ;
 import  './Loguin.css';
 import { FaUser } from "react-icons/fa";
 import { RiLockPasswordFill } from "react-icons/ri";
+import { useNavigate } from 'react-router-dom'
 
 
 
-function Loguin() {
+
+const Loguin = (props) => {
 
 
   const [action , setAction] = useState("LOG IN");
 
+  // ---
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [emailError, setEmailError] = useState('')
+  const [passwordError, setPasswordError] = useState('')
+
+
+  const navigate = useNavigate()
+
+
   return (
-    <div className='container'>
+    <div className='container w-96  '>
       <div className='header'>
         <div className='text text-3xl text-orange-50 flex justify-start text-whiteTwo font-extrabold'>
               {action}
@@ -25,7 +37,9 @@ function Loguin() {
         <FaUser />
           </div>
           <div className='w-5/6' >
-          <input type="text" placeholder='Usuario' className='bg-[#3e4957]  border-b border-yellow-400' />
+          <input value={email} type="text" placeholder='Usuario' 
+          onChange={ (eve) =>  setEmail(eve.target.value)}
+          className='bg-[#3e4957]  border-b border-yellow-400' />
 
           </div>
 
